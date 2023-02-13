@@ -1,0 +1,128 @@
+
+body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(rgb(14, 154, 156),rgba(0, 0, 0, 0.853));
+
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 100px 100px 100px;
+    cursor: pointer;
+    width: 20vw;
+    height: 35vh;
+    background-color: rgb(14, 59, 104);
+    color: aliceblue;
+    border: 2px solid rgba(0, 0, 0, 0.777);
+    grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+   
+}
+
+.box{
+   
+    border: 4px solid rgba(255, 255, 255, 0.176);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: xx-large;
+}
+h3 {
+    color: greenyellow;
+}
+
+
+.btn{
+    width: 5rem;
+    height: 2rem;
+    border-radius: 10px;
+    background-color: rgb(159, 33, 90);
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.strike{
+    position: absolute;
+    background-color: rgb(121, 7, 7);
+}
+
+.strike-row-1{
+    margin-top: 3%;
+    width: 20%;
+    height: 4px;
+}
+.strike-row-2{
+    margin-top: 8%;
+    width: 20%;
+    height: 4px;
+}
+.strike-row-3{
+    margin-top: 13%;
+    width: 20%;
+    height: 4px;
+}
+.strike-col-1{
+    margin-left: 3%;
+    width: 4px;
+    height: 35%;
+}
+.strike-col-2{
+    margin-left: 10%;
+    width: 4px;
+    height: 35%;
+}
+.strike-col-3{
+    margin-left: 16.5%;
+    width: 4px;
+    height: 35%;
+}
+.strike-diagonal-1{
+    margin-top: 8%;
+    margin-right: 14%;
+    width: 20%;
+    height: 4px;
+    transform: skewY(38deg);
+}
+.strike-diagonal-2{
+    margin-top: 8%;
+    margin-right: 14%;
+    width: 20%;
+    height: 4px;
+    transform: skewY(-38deg);
+}
+
+
+
+#gameOver{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 22%;
+    height: 30%;
+    margin-top:20px;
+    border: 2px solid white;
+}
+
+#gameOverText{
+    color: greenyellow;
+    font-size: xx-large;
+}
+
+.hidden {
+    display: none;
+}
+.visible {
+    display: block;
+}
+
+.x-hover .box::after{
+    color: greenyellow;
+    content: "X";
+}
+
+.o-hover:hover::after{
+    content: "O";
+}
