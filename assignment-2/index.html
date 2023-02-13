@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>assignment-2</title>
+    <style>
+        #div{
+            display: flex;
+            width: 15vw;
+            height: 15vh;
+            background-color: red;
+            margin-bottom: 30px;
+            border: 4px solid black;
+        }
+        .newDiv{
+            
+            width: 10vw;
+            height: 10vh;
+            background-color: teal;
+            margin:5px ;
+            border: 4px solid yellow;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div id="div" ></div>
+        <button onclick="changeColor()">Change color</button>
+        <button onclick="addChild()">Add Child</button>
+        <button onclick="removeChilds()">Remove Child</button>
+    </div>
+
+    <script> 
+    function changeColor(){
+
+        const color = ["red" , "greem" , "blue" , "black" , "yellow" , "purple" ,"teal" , "brown"]
+        const random = Math.floor(Math.random() * color.length);
+        document.getElementById("div").style.backgroundColor = color[random]
+    }
+
+    function addChild(){
+        
+        const newDiv = document.createElement("div");
+        newDiv.classList.add("newDiv")
+        document.getElementById("div").appendChild(newDiv);
+        // div.appendchild("newDiv")
+    }
+    function removeChilds(){
+        const remove = document.getElementById("div").querySelectorAll(".newDiv");
+        if(remove.length>0){
+            document.getElementById("div").removeChild(remove[remove.length-1]);
+        }
+    }
+
+    </script>
+</body>
+</html>
